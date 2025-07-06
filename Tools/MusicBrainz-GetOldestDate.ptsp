@@ -1,0 +1,5 @@
+title: GetOldestDate
+script_language_version: '1.1'
+script: |
+  $set(date,$if2(%_recording_firstreleasedate%,%originaldate%,%date%))
+id: cd09fe5c-0f5e-4206-9992-efb173405256
