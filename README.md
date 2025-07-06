@@ -2,13 +2,13 @@
 
 HitStar, the OpenSource Hitster clone leveraging your own songs!
 
-Build your own version of the game [Hitster][https://hitstergame.com/].
+Build your own version of the game [Hitster](https://hitstergame.com/).
 Full offline- & online availability
 Completely independent from online plattforms (Spotify, YouTube, Deezer, etc.)
 Leveraging your own playlists & music-collection
 
 
-Hitster is a music quiz card game developed and released by [Jumbo][https://hitstergame.com/].
+Hitster is a music quiz card game developed and released by [Jumbo](https://hitstergame.com/).
 Its very easy and fun to play in bigger groups AND it is even cooler if you can use your own playlists!
 
 The original game is dependent on Spotify and to enjoy the full gameplay experience you need a Spotify-Premium account.
@@ -51,7 +51,7 @@ In the [description] you learn howto:
 * For the offline version, the music files are stored on your mobile device
 * For the online version, you need a webserver that can serve static files
 
-**Hardware:  **
+**Hardware:**
 * Sheets of A4 paper, preferably 180 g/m².
 * A print-shop nearby or a own printer
 * Preferably a paper cutter, alternatively scissors
@@ -73,7 +73,7 @@ Option 2: You have your own music collection with the desired songs
 	- Most probably you have a playlist in your music player and the songs themselve are distributed over different folders of your computer
 	- We need the music files all in one directory
 		- Use your music player application to export a playlist to one folder
-		- As an alternative you can youse tools like [Amok Playlist Copy][https://amok.am/en/freeware/amok_playlist_copy/] to copy all music files from a playlist to one folder
+		- As an alternative you can youse tools like [Amok Playlist Copy](https://amok.am/en/freeware/amok_playlist_copy/) to copy all music files from a playlist to one folder
 
 ### Step 2: Harmonizing the music
 
@@ -90,13 +90,13 @@ Option 2: You have your own music collection with the desired songs
 
 #### 2.3 - The correct tagging
     - Your songs need at least the correct tagging for `TITLE`, `ARTIST` and `DATE`. 
-    	To tag your songs accordingly you can use free software tools like [mp3 Tag][https://www.mp3tag.de/en/] or others.
+    	To tag your songs accordingly you can use free software tools like [mp3 Tag](https://www.mp3tag.de/en/) or others.
 
     - With the `DATE` it is exremetly important to set the correct date of the first release. If you have music files from Best-Of albums or samplers the date is very often relating to the release date of that sampler. But for the quiz we need the date of the original first release.
     - There is a free tool called [MusicBrainz Picard][https://picard.musicbrainz.org/]. That tool can safe you a ton of work, as it is possible to gather Tags and also the initial release automatically from different online databases.
     To let the tool search for the oldest date you can use a custom Tagging-Script.
     Variants:
-    1. Import the scriptfile from the tools folder of the repo https://github.com/Born2Root/HitStar/blob/main/Tools/MusicBrainz-GetOldestDate.ptsp
+    1. Import the [scriptfile from the tools folder of the repo](https://github.com/Born2Root/HitStar/blob/main/Tools/MusicBrainz-GetOldestDate.ptsp)
     2. Make a new Tagging script yourself: `$set(date,$if2(%_recording_firstreleasedate%,%originaldate%,%date%))`
 ![image](https://github.com/user-attachments/assets/7e26af14-b39e-4084-8abe-896516012b54)
 
@@ -105,7 +105,7 @@ Option 2: You have your own music collection with the desired songs
 
 #### 3.1 - Exporting your music information for creating the cards
 To start creating the game cards we now need a .csv/ or Excel file that contains the information of your music.
-You can use tools like [mp3 Tag][https://www.mp3tag.de/en/]. Go to File -> Export -> .csv
+You can use tools like [mp3 Tag](https://www.mp3tag.de/en/). Go to File -> Export -> .csv
 
 ### 3.3 - Preparing the Excel-Table for Card Generation
 
@@ -136,13 +136,12 @@ Now we are ready to play!
 - Install the Android .apk on your phone.
 - Download the music on your phone or server
 - confire in the path to the music in the Apps settings
-- Start playing!  
+- Start playing!
 
 ## How to play
 
-Refer [the original game rules][howplay] for how to play the game itself. You
-do not need to connect Spotify. Scanning a QR code will open the track in your
-browser. Most browsers will auto-play the track.
+Refer [the original game rules]([howplay](https://hitstergame.com/en-us/how-to-play/)) for how to play the game itself. You
+do not need to connect Spotify. Scanning a QR-Code from one of the cards with the mobiel app will automatically play the song.
 
 Here is a short rundown of how to play:
 * Everyone receives a hit card at the beginning of a game. A hit contains information about a song, containing its title, the artist and year when it was released.
