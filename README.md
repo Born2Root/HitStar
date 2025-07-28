@@ -111,6 +111,10 @@ You can use tools like [mp3 Tag](https://www.mp3tag.de/en/). Go to File -> Expor
 
 
 
+=LINKS([@[Full Date]];4)
+
+
+
 ### 3.2 - Gnerating the QR-Codes for the Cards
 We need the QR-Codes to be printed on the cards.
 For that task we can use the freeware SimpleCodeGenerator and a simple Powershell script.
