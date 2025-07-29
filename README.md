@@ -105,20 +105,53 @@ Option 2: You have your own music collection with the desired songs
 
 #### 3.1 - Exporting your music information for creating the cards
 To start creating the game cards we now need a .csv/ or Excel file that contains the information of your music.
-You can use tools like [mp3 Tag](https://www.mp3tag.de/en/). Go to File -> Export -> .csv
+You can use tools like [mp3 Tag](https://www.mp3tag.de/en/) or others that support to export all information of music files in a folder to a database.
+
+With mp3 Tag you can open the folder where the music is saved.
+Afterwards go to File -> Export -> .csv
 
 ### 3.3 - Preparing the Excel-Table for Card Generation
 
+The exported .csv contains all information of the music files, like
+- path
+- ID-Tags
+- etc.
 
+In order to generate the game cards, we need some basic information.
+You can find an example Excel file in the repo [Hitstar_data_Example.xlsx](https://github.com/Born2Root/HitStar/blob/main/Hitstar_data_Example.xlsx)
+The coloumns with green headers are the ones with data directly from the .csv export.
+The coloumns with the blue headers are constructed in Excel and are necessary for the game card creation.
 
-=LINKS([@[Full Date]];4)
+Here is a short list of the information that wee need for the cards:
 
+- Name of the song: Artist + Song name
+- Year of release
+	- often the mp3-Tags contain a full blown date with month and day.
+	  For the game we just need the year. You can use Excel functions like "LEFT" to extract the year from the date string
+	  =LINKS([@[Full Date]];4)
+- Path to the music file
+	- We need the base path of the folder where your music files will later also be stored.
+	    * It makes sense to split the songs into the different categorys of the game (like, Summer Hits, Rock, etc.)
+- Path to icons on the cards
+	- If you want icons on the cards, you need to specify the path to the local stored picture
+- Path to the QR-Code
+	- In the next step we will generate QR-Codes. Here you can already specify the path where the individual QR codes will be saved.
+	- Just use the base Excel funtions to ease this task: ="C:\QR_Output\" &[@Pfad] & [@Name] &".png"
+
+Save the Excel file.
 
 
 ### 3.2 - Gnerating the QR-Codes for the Cards
 We need the QR-Codes to be printed on the cards.
 For that task we can use the freeware SimpleCodeGenerator and a simple Powershell script.
 You can find the script and the tool in the repo.
+
+To generate the QR-Codes you have to:
+- copy the content of the coloumn "QR-Content" from the Excel manually over to a plain .txt file
+- You can find an example in the repo [input.txt](https://github.com/Born2Root/HitStar/blob/main/Tools/1-QRGenerator/input.txt)
+- Start the Power-Shell script [Hitstar-QR-Generator.ps1](https://github.com/Born2Root/HitStar/blob/main/Tools/1-QRGenerator/Hitstar-QR-Generator.ps1)
+	- The script wil go through every line of the .txt file and generates an QR-Code using the SimpleCodeGenerator.exe in the same directory
+- After the script is finished you will have a QR-Code for every song saved into one directory
 
 
 #### 3.3 - Creating the cards
@@ -133,14 +166,16 @@ To do this you have to:
  - click the "Build deck" button to generate the cards
  - save the result by clicking the "PDF" or "Print deck" button
 
+
 ### 3.4 - Printing the cards
 
 We have now everything ready. Print the PDFs and cut the cards out.
 Now we are ready to play!
 - Install the Android .apk on your phone.
 - Download the music on your phone or server
-- confire in the path to the music in the Apps settings
-- Start playing!
+- configurate the path to the music in the Apps settings
+- Start playing by scanning the first card
+- 
 
 ## How to play
 
@@ -163,5 +198,5 @@ Also a much more interactive BINGO-Version
 #### Changing or enhancing the Android mobile app
  - The app was created with the free [MIT App Inventor](https://appinventor.mit.edu/)
  - You can find the [.aia project file](https://github.com/Born2Root/HitStar/blob/main/Tools/3-MobileApp/HitStar.aia) in the repo
- - Import it into your MIT App Inventor account and change the app as you like
+ - Import it into your MIT App Inventor account and change or extend the app as you like.
 
