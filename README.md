@@ -7,7 +7,7 @@ Full offline- & online availability
 Completely independent from online plattforms (Spotify, YouTube, Deezer, etc.)
 Leveraging your own playlists & music-collection.
 
-## What it's about?!
+## ⚡ What it's about?!
 Hitster is a music quiz card game developed and released by [Jumbo](https://hitstergame.com/).
 It's very easy and fun to play in bigger groups AND it is even cooler if you can use your own playlists!
 
@@ -43,7 +43,7 @@ In the [description](https://github.com/Born2Root/HitStar/#how-to-build-your-own
    
 <img width="245" height="340" alt="mobile app" src="https://github.com/user-attachments/assets/41dc5fd6-cfca-4870-9d6b-e1f0c2973f34" />
 
-## How-To build your own game
+## 📖 How-To build your own game
 
 ## Prerequisite
 
@@ -192,10 +192,20 @@ Also a much more interactive BINGO-Version.
 In the repo you can find a [ready to print PDF](https://github.com/Born2Root/HitStar/blob/main/Print%20-%20HitStar%20-%20Bingo.pdf) version of the BINGO-material (Spin Board and Cards).
 
 
-### FAQ
+### 💬 FAQ
 
 #### Changing or enhancing the Android mobile app
  - The app was created with the free [MIT App Inventor](https://appinventor.mit.edu/)
  - You can find the [.aia project file](https://github.com/Born2Root/HitStar/blob/main/Tools/3-MobileApp/HitStar.aia) in the repo
  - Import it into your MIT App Inventor account and change or extend the app as you like.
+
+
+
+# ❤️ Support:
+
+All the projects of me and my developer-friends are provided free of charge.
+If you like what we do, we would really appreciate your support! 🤝
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/born2root)
+
 
