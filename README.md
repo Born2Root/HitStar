@@ -41,7 +41,7 @@ The design is fully fexible and you can adjust it to your needs.
 * To have it cheap, print it black/ white
 * To make it look more professional make it colourfull
 
-<img width="570" height="323" alt="Example Cards" src="https://github.com/user-attachments/assets/4ed76ec8-7c2d-42e6-bed8-43178c621eb0" />
+<img width="570" height="323" alt="card-example" src="https://github.com/user-attachments/assets/9ee37332-8429-41ba-9739-2cd3e73c68ff" />
 
 The mobile App can be downloaded from the repo (at the moment available for Android).
 The App is completely OpenSource and written with MITAppInventor.
