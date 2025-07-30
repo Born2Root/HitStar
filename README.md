@@ -38,7 +38,7 @@ Main tasks to build your own HitStar game is to generate the game cards.
 The toolchain descibed below will generates a pdf with ready to print cards like this:
 
 The design is fully fexible and you can adjust it to your needs.
-* To have it cheap, print it black/white (like in the example picture below)
+* To have it cheap, print it black/ white
 * To make it look more professional make it colourfull
 
 <img width="570" height="323" alt="Example Cards" src="https://github.com/user-attachments/assets/4ed76ec8-7c2d-42e6-bed8-43178c621eb0" />
@@ -100,7 +100,7 @@ Option 2: You have your own music collection with the desired songs
 - Your songs need at least the correct tagging for `TITLE`, `ARTIST` and `DATE`. 
 To tag your songs accordingly you can use free software tools like [mp3 Tag](https://www.mp3tag.de/en/) or others.
 
-- With the `DATE` it is exremely important to set the correct date of the first release. If you have music files from Best-Of albums or samplers the date is very often relating to the release date of that sampler. But for the quiz we need the date of the original first release.
+- With the `DATE` it is very important to set the correct date of the first release. If you have music files from Best-Of albums or samplers the date is very often relating to the release date of that sampler. But for the quiz we need the date of the original first release.
 - There is a free tool called [MusicBrainz Picard](https://picard.musicbrainz.org/). That tool can safe you a ton of work, as it is possible to gather Tags and also the initial release automatically from different online databases.
 To let the tool search for the oldest date you can use a custom Tagging-Script.
 Variants:
