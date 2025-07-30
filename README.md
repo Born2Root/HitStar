@@ -3,8 +3,8 @@
 **HitStar, the OpenSource Hitster clone leveraging your own songs!**
 
 Build your own version of the game [Hitster](https://hitstergame.com/).
-Full offline- & online availability
-Completely independent from online plattforms (Spotify, YouTube, Deezer, etc.)
+Full offline- & online availability.
+Completely independent from online plattforms (Spotify, YouTube, Deezer, etc.).
 Leveraging your own playlists & music-collection.
 
 ## ⚡ What it's about?!
@@ -21,27 +21,32 @@ Want to keep it at the more general hits? Use the open playlists as inspiration.
 
 In the [description](https://github.com/Born2Root/HitStar/#how-to-build-your-own-game) you learn howto:
 - Prepare and gather your music files
-- Design and genrate your own cards
+- Design and generate your own cards
 - Print out and prepare the game material
 - Install and adjust the App for your mobile device
 - Play & have a lot of fun!
 
 **Key Points of the whole gameplay are:**
 
-- **The Game-Cards**
-	- The cards contain a QR code that points either to an offline audio file or a webserver. No Spotify, YouTube or other plattforms are needed to play. 
-	- The toolchain generates a pdf with ready to print cards like this:
+Printed game cards with a QR-Code on one side and the "solution", artist, song name and release-year on the other side.
+With the mobiel app the QR-Code is scanned and the app starts playing the corresponding audio file.
+The QR-Code points either to an offline audio file or a webserver. No Spotify, YouTube or other plattforms are needed to play.
+Afterwards one tries to guess the song. By turning the game card the solution is shown.
+
+
+Main tasks to build your own HitStar game is to generate the game cards.
+The toolchain descibed below will generates a pdf with ready to print cards like this:
 	    * The design is fully fexible and you can adjust it to your needs.
     	    * To have it cheap, print it black/white (like in the example picture below)
     	    * To make it look more professional make it colourfull
 
 <img width="570" height="323" alt="Example Cards" src="https://github.com/user-attachments/assets/4ed76ec8-7c2d-42e6-bed8-43178c621eb0" />
 
-- **The mobile App**
-	- The App to scan the cards and play the songs is at the moment available for Android
-	- The source is completely OpenSource and written with MITAppInventor
+The mobile App can be downloaded from the repo (at the moment available for Android).
+The App is completely OpenSource and written with MITAppInventor.
    
 <img width="245" height="340" alt="mobile app" src="https://github.com/user-attachments/assets/41dc5fd6-cfca-4870-9d6b-e1f0c2973f34" />
+
 
 ## 📖 How-To build your own game
 
@@ -88,14 +93,14 @@ Option 2: You have your own music collection with the desired songs
 #### 2.2 - Loudness
 - Usually the music files have different loudness levels. That means one song is a bit more quiet, others are louder.
 - For a good game experience it is best when all songs have the same loudness level
-- You can use freeware tools like [Mp3 Gain][https://mp3gain.sourceforge.net/download.php] to harmonize the loudness
+- You can use freeware tools like [Mp3 Gain](https://mp3gain.sourceforge.net/download.php) to harmonize the loudness
 
 #### 2.3 - The correct tagging
 - Your songs need at least the correct tagging for `TITLE`, `ARTIST` and `DATE`. 
 To tag your songs accordingly you can use free software tools like [mp3 Tag](https://www.mp3tag.de/en/) or others.
 
-- With the `DATE` it is exremetly important to set the correct date of the first release. If you have music files from Best-Of albums or samplers the date is very often relating to the release date of that sampler. But for the quiz we need the date of the original first release.
-- There is a free tool called [MusicBrainz Picard][https://picard.musicbrainz.org/]. That tool can safe you a ton of work, as it is possible to gather Tags and also the initial release automatically from different online databases.
+- With the `DATE` it is exremely important to set the correct date of the first release. If you have music files from Best-Of albums or samplers the date is very often relating to the release date of that sampler. But for the quiz we need the date of the original first release.
+- There is a free tool called [MusicBrainz Picard](https://picard.musicbrainz.org/). That tool can safe you a ton of work, as it is possible to gather Tags and also the initial release automatically from different online databases.
 To let the tool search for the oldest date you can use a custom Tagging-Script.
 Variants:
 1. Import the [scriptfile from the tools folder of the repo](https://github.com/Born2Root/HitStar/blob/main/Tools/MusicBrainz-GetOldestDate.ptsp)
@@ -116,13 +121,13 @@ Afterwards go to File -> Export -> .csv
 
 The exported .csv contains all information of the music files, like
 - path
-- ID-Tags
+- music file tagging information ('TITLE', 'ARTIST', 'DATE')
 - etc.
 
 In order to generate the game cards, we need some basic information.
 You can find an example Excel file in the repo [Hitstar_data_Example.xlsx](https://github.com/Born2Root/HitStar/blob/main/Hitstar_data_Example.xlsx)
-The coloumns with green headers are the ones with data directly from the .csv export.
-The coloumns with the blue headers are constructed in Excel and are necessary for the game card creation.
+The columns with green headers are the ones with data directly from the .csv export.
+The columns with the blue headers are constructed in Excel and are necessary for the game card creation.
 
 Here is a short list of the information that wee need for the cards:
 
@@ -133,7 +138,7 @@ Here is a short list of the information that wee need for the cards:
 	  =LINKS([@[Full Date]];4)
 - Path to the music file
 	- We need the base path of the folder where your music files will later also be stored.
-	    * It makes sense to split the songs into the different categorys of the game (like, Summer Hits, Rock, etc.)
+	    * It makes sense to split the songs into the different categories of the game (like, Summer Hits, Rock, etc.)
 - Path to icons on the cards
 	- If you want icons on the cards, you need to specify the path to the local stored picture
 - Path to the QR-Code
@@ -142,13 +147,13 @@ Here is a short list of the information that wee need for the cards:
 
 Save the Excel file.
 
-#### 3.3 - Gnerating the QR-Codes for the Cards
+#### 3.3 - Generating the QR-Codes for the Cards
 We need the QR-Codes to be printed on the cards.
 For that task we can use the freeware SimpleCodeGenerator and a simple Powershell script.
 You can find the script and the tool in the repo.
 
 To generate the QR-Codes you have to:
-- copy the content of the coloumn "QR-Content" from the Excel manually over to a plain .txt file
+- copy the content of the column "QR-Content" from the Excel manually over to a plain .txt file
 - You can find an example in the repo [input.txt](https://github.com/Born2Root/HitStar/blob/main/Tools/1-QRGenerator/input.txt)
 - Start the Power-Shell script [Hitstar-QR-Generator.ps1](https://github.com/Born2Root/HitStar/blob/main/Tools/1-QRGenerator/Hitstar-QR-Generator.ps1)
 	- The script wil go through every line of the .txt file and generates an QR-Code using the SimpleCodeGenerator.exe in the same directory
@@ -156,11 +161,11 @@ To generate the QR-Codes you have to:
 
 #### 3.4 - Creating the cards
 
-To create the game-cards we use the freeware tool [nanDECK](https://nandeck.com/)
+To create the game-cards we use the freeware tool [nanDECK](https://nandeck.com/).
 The tool allows us to script every detail of our cards, import a csv or Excel file and automatically generate the print-ready cards.
 To do this you have to:
  - provide the already created Excel-file containing the whole dataset for the cards
- - open the [script](https://github.com/Born2Root/HitStar/blob/main/Tools/nandDECK/main_Hitstar-Deck.txt) from the repo in nanDECK
+ - open the [script](https://github.com/Born2Root/HitStar/blob/main/Tools/2-nandDECK/main_Hitstar-Deck.txt) from the repo in nanDECK
  - adjust the path to your local Excel file in the script
  - click the "Validate deck" button to check if everything is correct
  - click the "Build deck" button to generate the cards
@@ -180,16 +185,21 @@ Now we are ready to play!
 
 Refer [the original game rules](https://hitstergame.com/en-us/how-to-play/) for how to play the game itself. You
 do not need to connect Spotify. Scanning a QR-Code from one of the cards with the mobiel app will automatically play the song.
+To do this install the .apk from this repo on you Android phone.
+After launching the app, press the big scan button in the middle.
+The app will switch to camera mode so you are able to scan a game card QR-Code and play the according music-file.
 
-Here is a short rundown of how to play:
+To configure the path where the music is stored, click on the setting button, and adjust the path to your phones local storage or add the link to you static webserver.
+
+
+Here is a short rundown of the game itself:
 * Everyone receives a hit card at the beginning of a game. A hit contains information about a song, containing its title, the artist and year when it was released.
 * A short snippet of a hit is played to you. You'll have to guess if it was released either before or after the hit that you already have in your collection.
 * If you guessed correctly, you'll earn the hit card and add it to your collection. The game will continue to the next player.
 * Next time it's your turn, you'll be played a hit again, but this time, you'll have to guess if it was released either before your earliest hit's release year, between your two hits, or after the latest hit release. Guess correctly to earn yourself another hit card, grow your collection, but also make it harder to guess your next hit correctly.
 
 There is more to it, like tokens you can earn by also guessing title and artist of a hit, and paying them to intercept your opponents by correcting their guesses to earn their hit for your own.
-Also a much more interactive BINGO-Version.
-In the repo you can find a [ready to print PDF](https://github.com/Born2Root/HitStar/blob/main/Print%20-%20HitStar%20-%20Bingo.pdf) version of the BINGO-material (Spin Board and Cards).
+I can also recommend the much more interactive BINGO-Version. In the repo you can find a [ready to print PDF](https://github.com/Born2Root/HitStar/blob/main/Print%20-%20HitStar%20-%20Bingo.pdf) version of the BINGO-material (Spin Board and Cards).
 
 
 ### 💬 FAQ
