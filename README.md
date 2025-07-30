@@ -26,19 +26,20 @@ In the [description](https://github.com/Born2Root/HitStar/#how-to-build-your-own
 - Install and adjust the App for your mobile device
 - Play & have a lot of fun!
 
-**Key Points of the whole gameplay are:**
+**Key Points of the whole gameplay:**
 
-Printed game cards with a QR-Code on one side and the "solution", artist, song name and release-year on the other side.
-With the mobiel app the QR-Code is scanned and the app starts playing the corresponding audio file.
+Most important are the printed game cards with a QR-Code on one side and the "solution", artist, song name and release-year on the other side.
+With the mobile app the QR-Code is scanned and the app starts playing the corresponding audio file.
 The QR-Code points either to an offline audio file or a webserver. No Spotify, YouTube or other plattforms are needed to play.
 Afterwards one tries to guess the song. By turning the game card the solution is shown.
 
 
 Main tasks to build your own HitStar game is to generate the game cards.
 The toolchain descibed below will generates a pdf with ready to print cards like this:
-	    * The design is fully fexible and you can adjust it to your needs.
-    	    * To have it cheap, print it black/white (like in the example picture below)
-    	    * To make it look more professional make it colourfull
+
+The design is fully fexible and you can adjust it to your needs.
+* To have it cheap, print it black/white (like in the example picture below)
+* To make it look more professional make it colourfull
 
 <img width="570" height="323" alt="Example Cards" src="https://github.com/user-attachments/assets/4ed76ec8-7c2d-42e6-bed8-43178c621eb0" />
 
